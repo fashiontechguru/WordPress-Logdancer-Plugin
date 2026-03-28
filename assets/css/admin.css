@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Log Dancer — Admin Styles
+   ========================================================================== */
+
+/* Layout */
+.logdancer-wrap {
+    max-width: 1200px;
+}
+
+.logdancer-page-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.logdancer-page-title .dashicons {
+    color: #2271b1;
+    font-size: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 2px;
+}
+
+/* Navigation links row */
+.logdancer-nav-links {
+    margin-top: 1.25rem;
+    display: flex;
+    gap: 8px;
+}
+
+/* Stats grid */
+.logdancer-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.logdancer-stat-card {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+}
+
+.logdancer-stat-value {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+    color: #1d2327;
+}
+
+.logdancer-stat-label {
+    font-size: 0.8125rem;
+    color: #50575e;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.logdancer-stat--danger .logdancer-stat-value  { color: #d63638; }
+.logdancer-stat--warn .logdancer-stat-value    { color: #b26200; }
+.logdancer-stat--ok .logdancer-stat-value      { color: #00a32a; }
+
+/* Severity badges */
+.logdancer-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #fff;
+}
+
+.logdancer-badge--debug    { background: #8c8f94; }
+.logdancer-badge--info     { background: #2271b1; }
+.logdancer-badge--notice   { background: #00a0d2; }
+.logdancer-badge--warning  { background: #b26200; }
+.logdancer-badge--error    { background: #d63638; }
+.logdancer-badge--critical { background: #8a0000; }
+
+/* Muted value placeholder */
+.logdancer-muted {
+    color: #8c8f94;
+}
+
+/* Alert boxes */
+.logdancer-alert {
+    padding: 0.875rem 1rem;
+    border-radius: 3px;
+    border-left: 4px solid transparent;
+    margin-bottom: 1.25rem;
+    font-size: 0.9rem;
+    background: #f0f0f1;
+}
+
+.logdancer-alert--critical {
+    border-color: #8a0000;
+    background: #fcf0f0;
+    color: #8a0000;
+}
+
+.logdancer-alert--warning {
+    border-color: #b26200;
+    background: #fcf9e8;
+    color: #6b4700;
+}
+
+.logdancer-alert--info {
+    border-color: #2271b1;
+    background: #f0f6fc;
+    color: #2271b1;
+}
+
+/* General table helpers */
+.logdancer-table {
+    margin-top: 0.5rem;
+}
+
+/* Health table */
+.logdancer-health-table td,
+.logdancer-health-table th {
+    vertical-align: middle;
+}
+
+.logdancer-health-row--error   { background: #fcf0f0; }
+.logdancer-health-row--warning { background: #fcf9e8; }
+
+.logdancer-check--ok      { color: #00a32a; }
+.logdancer-check--warning { color: #b26200; }
+.logdancer-check--error   { color: #d63638; }
+
+/* Danger text */
+.logdancer-danger-text {
+    color: #d63638;
+}
+
+/* Filters row in list table */
+.logdancer-filters select,
+.logdancer-filters input[type="date"] {
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+/* Responsive: collapse stats grid on narrow screens */
+@media screen and (max-width: 782px) {
+    .logdancer-stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
